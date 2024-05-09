@@ -1,0 +1,10 @@
+python depth_2_pcd.py scene0198_00
+python depth_2_pcd.py scene0295_00
+python depth_2_pcd.py scene0417_00
+python depth_2_pcd.py scene0298_00
+python depth_2_pcd.py scene0178_00
+python depth_2_pcd.py scene0333_00
+python depth_2_pcd.py scene0418_00
+python depth_2_pcd.py scene0155_00
+python depth_2_pcd.py scene0133_00
+python depth_2_pcd.py scene0156_00

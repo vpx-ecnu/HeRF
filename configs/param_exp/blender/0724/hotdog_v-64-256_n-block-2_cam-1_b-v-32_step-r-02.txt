@@ -1,0 +1,106 @@
+dataset_name = blender
+datadir = /media/data/yxy/ed-nerf/data/nerf/nerf_synthetic/hotdog/
+expname = 0724_hotdog_v-64-256_n-block-2_cam-1_b-v-32_step-r-02
+basedir = /home/dblu/data/logs/TensoRF/param_exp/blender/0724
+points_generation_mode = 'mvsnet'
+add_timestamp = 1
+downsample_train = 1
+downsample_test = 1
+
+n_iters = 30000
+batch_size = 4096
+lr_decay_iters = 2000
+
+voxel_num = [64, 64, 64]
+voxel_num_final = [256, 256, 256]
+n_block_per_axis = 2
+camera_group_num = 1
+batch_voxel_res = 32
+step_ratio = 0.2
+
+upsamp_list = [2000,3000,4000,5500,7000]
+update_AlphaMask_list = [100000, 150000, 200000, 250000, 300000, 350000] # deprecated
+
+N_vis = 2
+vis_every = 10000
+
+
+
+render_test = 1
+
+
+# common setting in blender
+n_lamb_sigma = [16,16,16]
+n_lamb_sh = [48,48,48]
+model_name = TensorVMSplit
+
+
+shadingMode = MLP_Fea
+fea2denseAct = softplus
+
+view_pe = 2
+fea_pe = 2
+
+L1_weight_inital = 8e-5
+L1_weight_rest = 4e-5
+rm_weight_mask_thre = 1e-4
+
+load_points = 0
+depth_grid = 128
+ranges = [-1.5, -1.5, -1.5, 1.5, 1.5, 1.5]
+vox_res = 320
+feat_dim = 20
+prob_freq = 10001
+prob_num_step = 20
+pre_d_est = /media/data/yxy/ed-nerf/logs/point-nerf/checkpoints/MVSNet/model_000014.ckpt
+shading_feature_mlp_layer0 = 1
+manual_depth_view = 1
+mvs_point_sampler = gau_single_sampler
+checkpoints_dir = /media/data/yxy/ed-nerf/logs/point-nerf/checkpoints/nerfsynth/
+color_loss_items = [ray_masked_coarse_raycolor, ray_miss_coarse_raycolor, coarse_raycolor]
+color_loss_weights = [1.0, 0.0, 0.0]
+K = 8
+NN = 2
+P = 9
+SR = 80
+search_layer_minus = 7
+act_type = LeakyReLU
+agg_axis_weight = [1.0, 1.0, 1.0]
+agg_dist_pers = 20
+agg_distance_kernel = linear
+agg_intrp_order = 2
+appr_feature_str0 = [imgfeat_0_0123, dir_0, point_conf]
+default_conf = 0.15
+depth_conf_thresh = 0.8
+depth_limit_scale = 0.0
+depth_occ = 0
+dist_xyz_freq = 5
+kernel_size = [3, 3, 3]
+mode = 1
+num_feat_freqs = 3
+num_pos_freqs = 10
+out_channels = 4
+point_color_mode = 1
+point_conf_mode = 1
+point_dir_mode = 1
+point_features_dim = 32
+prob_thresh = 0.7
+query_size = [3, 3, 3]
+radius_limit_scale = 4.0
+raydist_mode_unit = 1
+shading_color_mlp_layer = 4
+shpnt_jitter = 'uniform'
+test_color_loss_items = [coarse_raycolor, ray_miss_coarse_raycolor, ray_masked_coarse_raycolor]
+visual_items = [coarse_raycolor, gt_image]
+vscale = [2, 2, 2]
+vsize = [0.004, 0.004, 0.004]
+wcoord_query = -1
+which_ray_generation = near_far_linear
+which_render_func = radiance
+which_tonemap_func = off
+zero_one_loss_items = [conf_coefficient]
+zero_one_loss_weights = [0.0001]
+resume_iter = best
+resume_dir = /media/data/yxy/ed-nerf/point-nerf/checkpoints/init/dtu_dgt_d012_img0123_conf_agg2_32_dirclr20
+
+debug_load_n_dataset = -1

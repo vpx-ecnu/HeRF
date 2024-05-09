@@ -1,0 +1,57 @@
+
+dataset_name = scannet
+datadir = /media/data/yxy/ed-nerf/data/scannet/scans/scene0241_01
+expname = v-32-256_n-block-2_cam-2_b-v-32_step-r-02
+basedir = /home/dblu/data/logs/TensoRF/param_exp/scannet/0726
+
+
+add_timestamp = 1
+n_iters = 80000
+batch_size = 4096
+
+downsample_train = 2.0
+downsample_test = 2.0
+
+N_voxel_init = 2097156 # 128**3, deprecated
+N_voxel_final = 27000000 # 300**3, deprecated
+voxel_num = [32, 32, 32]
+voxel_num_final = [256, 256, 256]
+n_block_per_axis = 2
+camera_group_num = 2
+batch_voxel_res = 32
+density_shift = -10
+step_ratio = 0.2
+
+lr_init = 1.
+lr_decay_target_ratio = 0.2
+
+upsamp_list = [2000,3000,4000,5500,7000]
+update_AlphaMask_list = [80001, 80002]
+
+N_vis = 2
+vis_every = 1000
+
+render_test = 1
+
+n_lamb_sigma = [16,16,16]
+n_lamb_sh = [48,48,48]
+model_name = TensorVMSplit
+
+
+shadingMode = MLP_Fea
+fea2denseAct = softplus
+
+view_pe = 2
+fea_pe = 2
+
+L1_weight_inital = 8e-5
+L1_weight_rest = 4e-5
+rm_weight_mask_thre = 1e-4
+
+## please uncomment following configuration if hope to training on cp model
+#model_name = TensorCP
+#n_lamb_sigma = [96]
+#n_lamb_sh = [288]
+#N_voxel_final = 125000000 # 500**3
+#L1_weight_inital = 1e-5
+#L1_weight_rest = 1e-5
