@@ -2,7 +2,7 @@
 
 Xiaoyan Yang, Dingbo Lu, Wenjie Liu, Ling You, Yang Li, Changbo Wang
 
-IJCNN 2024 (comming soon),  [Project Page](https://vpx-ecnu.github.io/HeRF_website/), Video(comming soon)
+IJCNN 2024 paper(coming soon),  [Project Page](https://vpx-ecnu.github.io/HeRF_website/), Video(coming soon)
 
 ## Installation
 
