@@ -1,4 +1,8 @@
-# Anydoor
+# HeRF: A Hierarchical Framework for Efficient and Extendable New View Synthesis  
+
+Xiaoyan Yang, Dingbo Lu, Wenjie Liu, Ling You, Yang Li, Changbo Wang
+
+IJCNN 2024 (comming soon),  [Project Page](https://vpx-ecnu.github.io/HeRF_website/), Video(comming soon)
 
 ## Installation
 
